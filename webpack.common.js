@@ -11,7 +11,7 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Production',
+            title: 'Wesather App',
         }),
     ],
     output: {
@@ -24,6 +24,10 @@ export default {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             },
         ],
     },
