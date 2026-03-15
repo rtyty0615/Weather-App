@@ -11,11 +11,25 @@ async function getWeather() {
         console.log(response);
         const responseGetJson = await response.json();
         console.log(responseGetJson);
+        return responseGetJson
+
     } catch (error) {
         console.error("Error fetching the image:", error);
     }
 }
 
-getWeather()
+async function main() {
+    const response = await getWeather();
+    const weatherData = {
+        city: response.address,
+        temperature: response.days[0].temp,
+        description: response.description,
+        humidity: response.days[0].humidity,
+    };
+    console.log(weatherData);
+    return weatherData
+}
+
+main()
 
 console.log(greeting);
