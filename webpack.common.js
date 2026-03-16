@@ -11,7 +11,7 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Wesather App',
+            template: './src/template.html',
         }),
     ],
     output: {
