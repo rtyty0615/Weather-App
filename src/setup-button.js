@@ -1,9 +1,10 @@
 import { processWeather } from "./process-weather.js";
 
 export function setupEventListeners() {
-    const btn = document.querySelector("button");
+    const form = document.querySelector("#weather-form");
     const input = document.querySelector("#location");
-    btn.addEventListener("click", () => {
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
         const cityName = input.value.trim();
         if (cityName === "") {
             alert("You cannot enter only space!");
