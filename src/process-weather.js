@@ -11,6 +11,7 @@ export async function processWeather(cityName) {
         temperature: response.days[0].temp,
         description: response.description,
         humidity: response.days[0].humidity,
+        icon: response.days[0].icon
     };
     console.log("Weather for UI:", weatherData);
     renderWeather(weatherData)
