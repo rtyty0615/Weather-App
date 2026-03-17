@@ -1,4 +1,4 @@
-import { processWeather } from "./process-weather.js";
+import { checkInput } from "./check-input.js";
 
 export function setupEventListeners() {
     const form = document.querySelector("#weather-form");
@@ -11,7 +11,6 @@ export function setupEventListeners() {
             input.focus();
             return;
         }
-        processWeather(cityName);
+        checkInput(cityName);
     })
-    
 }

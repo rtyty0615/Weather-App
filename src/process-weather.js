@@ -1,9 +1,6 @@
-import { getWeather } from "./get-weather.js";
 import { renderWeather } from "./render-weather.js";
 
-export async function processWeather(cityName) {
-    const response = await getWeather(cityName);
-    if (!response) return null;
+export async function processWeather(response) {
     const rawCity = response.address;
     const formattedCity = rawCity.charAt(0).toUpperCase() + rawCity.slice(1).toLowerCase();
     const weatherData = {
