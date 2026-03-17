@@ -13,4 +13,5 @@ export function setupEventListeners() {
         }
         processWeather(cityName);
     })
+    
 }

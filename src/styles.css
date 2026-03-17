@@ -22,10 +22,15 @@ body {
     align-self: flex-end;
 }
 
-#c, #h {
+#c, #f {
     background-color: rgb(158, 232, 255);
     border-radius: 5px;
     border-color: aliceblue;
+}
+
+#c.active,
+#f.active {
+    background-color: rgb(94, 218, 255);
 }
 
 h1 {
