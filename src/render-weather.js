@@ -3,7 +3,7 @@ import { setupTemperature } from "./setup-temperature.js";
 
 export function renderWeather(weatherData) {
     const main = document.querySelector("#main");
-    main.innerHTML = "";
+    main.textContent = "";
 
     const content = document.createElement("div");
     content.id = "content";
@@ -25,7 +25,6 @@ export function renderWeather(weatherData) {
     icon.id = "weather-icon";
     icon.alt = weatherData.icon;
     displayIcon(weatherData.icon);
-    console.log(weatherData.icon);
 
     const temp = document.createElement("h2");
     temp.textContent = weatherData.temperature + " °F";
