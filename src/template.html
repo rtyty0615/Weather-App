@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <style>
+        #weather-icon {
+            width: 260px;
+            height: 260px;
+        }
+    </style>
 </head>
 <body>
     <form id="weather-form">
-        <input type="text" id="location" placeholder="Enter city...">
+        <input type="text" id="location" value="taipei" placeholder="Enter city...">
         <button type="submit">Get Weather</button>
     </form>
     <div id="main">
